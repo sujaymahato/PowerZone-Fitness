@@ -156,6 +156,11 @@ body {
     .facility-col {
         flex: 0 0 100%;
     }
+
+    .facility-item:hover .text-overlay {
+    transform: translateY(-130%);
+    
+}
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
