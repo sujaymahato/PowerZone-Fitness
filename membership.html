@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerZone Fitness</title>
+    <link rel="stylesheet" href="css/membership.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+</head>
+
+<body class="transparent-nav">
+
+    
+<!---------------------------------------------navbar------------------------------->
+    <nav class="navbar navbar-expand-lg transparent-nav sticky-top">
+        <div class="container-fluid font">
+            <a class="navbar-brand" href="index.html">
+                <img src="images-homepage/logo.png" height="70px" width="70px" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-active" href="membership.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="classes.html">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nutrition.html">Nutrition</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="facilities.html">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+<!---------------------------------------------Membership Card------------------------------->
+    <section class="membership text-white p-5 font">
+        <div class="container-fluid text-center font">
+            <h1 class="mb-4 display-4">Membership Plans</h1>
+            <p class="lead mb-5">Choose the best plan that suits your fitness journey.</p>
+            <div class="membership-row">
+                <!-- Basic Membership Card -->
+                <div class="membership-card bg-secondary text-light shadow">
+                    <div class="card-body font">
+                        <h2 class="card-title">Basic Membership</h2>
+                        <h3 class="card-price">$19/month</h3>
+                        <ul class="list-styled text-start mb-3">
+                            <li>Access to gym facilities</li>
+                            <li>Group classes</li>
+                            <li>Free health assessment</li>
+                            <li>Monthly fitness workshops</li>
+                            <li>Access to online fitness resources</li>
+                            <li>Discounts on merchandise</li>
+                            <li>Community events and challenges</li>
+                        </ul>
+                        <p class="card-text">Access to gym facilities, equipment, group classes, and more.</p>
+                        <button class="btn btn-light" id="joinNowBtn" data-bs-toggle="modal" data-bs-target="#basicMembershipModal">Join Now</button>
+                    </div>
+                </div>
+        
+                <!-- Premium Membership Card -->
+                <div class="membership-card bg-primary text-light shadow">
+                    <div class="card-body font">
+                        <h2 class="card-title text-center">Premium Membership</h2>
+                        <h3 class="card-price">$29/month</h3>
+                        <ul class="list-styled text-start mb-3">
+                            <li>All Basic Membership features</li>
+                            <li>2 personal training sessions/month</li>
+                            <li>Customized nutrition plans</li>
+                            <li>Access to exclusive workshops</li>
+                            <li>Monthly progress tracking</li>
+                            <li>Priority access to new classes</li>
+                            <li>Referral discounts for bringing friends</li>
+                        </ul>
+                        <p class="card-text">Includes personal training sessions and nutrition plans.</p>
+                        <button class="btn btn-light" id="joinNowBtn" data-bs-toggle="modal" data-bs-target="#premiumMembershipModal">Join Now</button>
+                    </div>
+                </div>
+        
+                <!-- VIP Membership Card -->
+                <div class="membership-card bg-danger text-light shadow">
+                    <div class="card-body font">
+                        <h2 class="card-title">VIP Membership</h2>
+                        <h3 class="card-price">$39/month</h3>
+                        <ul class="list-styled text-start mb-3">
+                            <li>All Premium Membership features</li>
+                            <li>Unlimited personal training sessions</li>
+                            <li>Exclusive access to VIP events</li>
+                            <li>Priority booking for classes</li>
+                            <li>Complimentary guest passes</li>
+                            <li>Personalized fitness and nutrition coaching</li>
+                            <li>Exclusive access to online member forums</li>
+                        </ul>
+                        <p class="card-text">All premium benefits plus exclusive access to special events.</p>
+                        <button class="btn btn-light" id="joinNowBtn" data-bs-toggle="modal" data-bs-target="#vipMembershipModal">Join Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+    
+        <!-- Modals -->
+<!-- Success Message Area -->
+<div id="mainMessage" class="text-center" style="display: none; color: green; margin-top: 20px; font-size: 30px;"></div>
+<!-- Basic Membership Modal -->
+<div class="modal fade font"  id="basicMembershipModal" tabindex="-1" aria-labelledby="basicMembershipModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-3 shadow-lg">
+            <div class="modal-header bg-gradient text-white">
+                <h5 class="modal-title font text-secondary" id="basicMembershipModalLabel">Join Basic Membership</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="basicMembershipForm">
+                    <div class="mb-3">
+                        <label for="basicName" class="form-label font">Name</label>
+                        <input type="text" class="form-control" id="basicName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="basicEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="basicEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="basicPhone" class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="basicPhone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="basicDuration" class="form-label">Membership Duration</label>
+                        <select class="form-select" id="basicDuration" required>
+                            <option value="">Choose...</option>
+                            <option value="1">1 Month/$19
+                            </option>
+                            <option value="3">3 Months/$51.30  (10% off)</option>
+                            <option value="6">6 Months/$96.90 (15% off)</option>
+                            <option value="12">12 Months/$182.40 (20% off)
+                            </option>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="paymentMethod">
+                        <label class="form-label ">Payment Method</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="basicCard" value="Card" required>
+                            <label class="form-check-label" for="basicCard">Credit Card</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="basicPaypal" value="PayPal" required>
+                            <label class="form-check-label" for="basicPaypal">PayPal</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="infoMessage text-center" style="color: orange; display: none;"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="basicSubmitBtn">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Premium Membership Modal -->
+<div class="modal fade" id="premiumMembershipModal" tabindex="-1" aria-labelledby="premiumMembershipModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-3 shadow-lg">
+            <div class="modal-header bg-gradient text-white">
+                <h5 class="modal-title font text-primary" id="premiumMembershipModalLabel">Join Premium Membership</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="premiumMembershipForm">
+                    <div class="mb-3">
+                        <label for="premiumName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="premiumName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="premiumEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="premiumEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="premiumPhone" class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="premiumPhone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="premiumDuration" class="form-label">Membership Duration</label>
+                        <select class="form-select" id="premiumDuration" required>
+                            <option value="">Choose...</option>
+                            <option value="1">1 Month/$29</option>
+                            <option value="3">3 Months/$78.30 (10% off)</option>
+                            <option value="6">6 Months/$147.90 (15% off)</option>
+                            <option value="12">12 Months/$278.40 (20% off)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="premiumCard" value="Card" required>
+                            <label class="form-check-label" for="premiumCard">Credit Card</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="premiumPaypal" value="PayPal" required>
+                            <label class="form-check-label" for="premiumPaypal">PayPal</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="infoMessage text-center" style="color: orange; display: none;"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="premiumSubmitBtn">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- VIP Membership Modal -->
+<div class="modal fade" id="vipMembershipModal" tabindex="-1" aria-labelledby="vipMembershipModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-3 shadow-lg">
+            <div class="modal-header bg-gradient text-white">
+                <h5 class="modal-title font text-danger" id="vipMembershipModalLabel">Join VIP Membership</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="vipMembershipForm">
+                    <div class="mb-3">
+                        <label for="vipName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="vipName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="vipEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="vipEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="vipPhone" class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="vipPhone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="vipDuration" class="form-label">Membership Duration</label>
+                        <select class="form-select" id="vipDuration" required>
+                            <option value="">Choose...</option>
+                            <option value="1">1 Month/$39</option>
+                            <option value="3">3 Months/$105.30 (10% off)
+                            </option>
+                            <option value="6">6 Months/$198.90 (15% off)</option>
+                            <option value="12">12 Months/$374.40 (20% off)
+</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="vipCard" value="Card" required>
+                            <label class="form-check-label" for="vipCard">Credit Card</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="vipPaypal" value="PayPal" required>
+                            <label class="form-check-label" for="vipPaypal">PayPal</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="infoMessage text-center" style="color: orange; display: none;"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="vipSubmitBtn">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+        <hr class="my-5">
+    
+        <h2 class="mb-4">Membership Benefits</h2>
+        <ul class="list-unstyled text-start">
+            <li>Access to top-notch gym equipment</li>
+            <li>Supportive community</li>
+            <li>Regular fitness challenges</li>
+            <li>Member-exclusive discounts on merchandise</li>
+        </ul>
+    
+        <hr class="my-5">
+    
+        <h2 class="mb-4">What Our Members Say</h2>
+        <div class="testimonial text-dark">
+            <p>"Joining PowerZone Fitness has transformed my life! The trainers are amazing and the community is so supportive!"</p>
+            <cite>- Sujay Mahato.</cite>
+        </div>
+    </div>
+
+
+    </section>
+    
+    
+<!---------------------------------------------Footer------------------------------->
+    <footer class="footer text-white p-4 font">
+        <div class="container text-center">
+            <div class="row">
+    
+                <div class="col-md-4 col-6 follow-us">
+                    <h5 class="mb-4">Follow Us</h5>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i> Twitter</a><br>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i> Facebook</a><br>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i> Instagram</a><br>
+                </div>
+    
+            
+                <div class="col-md-4 col-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <a href="index.html" class="text-white">Home</a><br>
+                    <a href="classes.html" class="text-white">Classes</a><br>
+                    <a href="facilities.html" class="text-white">Facilities</a><br>
+                    <a href="nutrition.html" class="text-white">Nutrition</a><br>
+                   
+               
+                </div>
+    
+                <div class="col-md-4 col-12 mb-5">
+                    <h5 class="mb-4">Contact Us</h5>
+                    <p>Telephone: +1 (555) 123-4567</p>
+                    <p>Email: info@powerzonefitness.com</p>
+                    <p>Address: 123 Gym St, Fitness City, USA</p>
+                </div>
+             
+            </div>
+            <hr class="bg-white">
+            <p>&copy; 2024 PowerZone Fitness. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+<script src="js/membership.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #000000, #2a2a2a);
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.font {
+    font-family: "Poppins", sans-serif;
+}
+
+.transparent-nav {
+    background-color: #1a1a1a;
+
+}
+
+.navbar-toggler-icon {
+    background-color: rgb(255, 255, 255);
+}
+
+
+.transparent-nav .nav-link {
+    color: white;
+    font-size: 18px;
+}
+
+.navbar .nav-link.custom-active {
+    color: #ff1414;
+}
+
+.transparent-nav .nav-link:hover {
+    color: #ff1414;
+}
+
+.transparent-nav .navbar-brand {
+    color: white;
+    font-size: 25px;
+}
+
+.transparent-nav .navbar-brand:hover {
+    color: #ff1414;
+}
+
+
+.logo {
+    border-radius: 50%;
+}
+
+
+h1.display-4 {
+    font-size: 3.5rem;
+    color: #ff1414;
+    margin-bottom: 40px;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+}
+
+.class-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 650px;
+    background: #1f1f1f;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.class-card:hover {
+    transform: translateY(-15px) rotate(-1deg);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.class-card img {
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-bottom: 5px solid #ff1414;
+}
+
+.class-card:hover img {
+    transform: scale(1.15);
+}
+
+.card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.card-subtitle {
+    font-size: 1.4rem;
+    color: #ff4040;
+    margin-bottom: 10px;
+}
+
+.btn-danger {
+    background-color: #ff1414;
+    border-radius: 25px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(255, 20, 20, 0.5);
+}
+
+.btn-danger:hover {
+    background-color: #ff4040;
+    color: white;
+    box-shadow: 0 8px 25px rgba(255, 64, 64, 0.6);
+}
+
+.detailed-card {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    color: white;
+    margin: 30px 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.d-none {
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: calc(33.333% - 10px);
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.schedule-text {
+    font-size: 18px;
+    color: #FF4040;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 5px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -15px;
+}
+
+
+.footer {
+    background-color: #1A1A1A;
+}
+
+.footer h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer h5 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+}
+
+.footer a:hover {
+    color: #ff1414;
+
+}
+
+.footer hr {
+    margin: 20px 0;
+
+}
+
+
+
+
+@media (max-width: 576px) {
+    .class-card {
+        width: 100%;
+        margin: 15px 0;
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .class-card {
+        width: 100%;
+        margin: 15px 0;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .class-card {
+        width: calc(50% - 30px);
+        margin: 15px 0;
+    }
+}
+
+@media (min-width: 993px) {
+    .class-card {
+        width: calc(33.33% - 30px);
+        margin: 15px 0;
+    }
+}
