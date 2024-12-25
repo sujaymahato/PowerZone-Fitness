@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: "Poppins", sans-serif;
+}
+
+.font {
+    font-family: "Poppins", sans-serif;
+}
+
+.transparent-nav {
+    background-color: #1a1a1a;
+
+}
+
+
+.navbar-toggler-icon {
+    background-color: rgb(255, 255, 255);
+}
+
+
+.transparent-nav .nav-link {
+    color: white;
+    font-size: 18px;
+}
+
+.navbar .nav-link.custom-active {
+    color: #ff1414;
+
+}
+
+.transparent-nav .nav-link:hover {
+    color: #ff1414;
+
+}
+
+.transparent-nav .navbar-brand {
+    color: white;
+    font-size: 25px;
+}
+
+.transparent-nav .navbar-brand:hover {
+    color: #ff1414;
+
+}
+
+.banner {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+
+}
+
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.heading {
+    padding-top: 120px;
+    font-size: 70px;
+    color: #ff1414;
+    font-weight: 400;
+
+}
+
+.headingp {
+    padding-top: -20px;
+    color: white;
+    font-size: 25px;
+}
+
+.button-container {
+    margin-top: -20px;
+    margin-left: 50px;
+
+}
+
+.btn {
+    margin-top: 20px;
+
+}
+
+.navbar-collapse.show+.banner .heading {
+    top: 300px;
+
+}
+
+.navbar-collapse.show+.banner .headingp {
+    top: 465px;
+}
+
+
+.logo {
+    border-radius: 50%;
+}
+
+
+
+.about {
+    background: #000000;
+    color: white;
+}
+
+
+
+.custom-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.aboutimage,
+.text-center {
+    flex: 1 1 45%;
+    padding: 10px;
+}
+
+.aboutimage img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.9s ease;
+}
+
+.text-center {
+    transition: transform 0.9s ease;
+}
+
+.about:hover .aboutimage img {
+    transform: translateX(700px);
+}
+
+.about:hover .text-center {
+    transform: translateX(-700px);
+}
+
+.about p {
+    font-size: 20px;
+    text-align: start;
+}
+
+
+.facility h4 {
+    margin-top: 15px;
+    font-size: 1.25rem;
+}
+
+.facility-image {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.facility-item {
+    position: relative;
+    cursor: pointer;
+    flex: 0 0 100%;
+}
+
+.facility-item .img-container {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.facility-item img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.facility-item:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.facility-item .text-overlay {
+    position: relative;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+    margin-top: 10px;
+}
+
+.facility-item:hover .text-overlay {
+    transform: translateY(-150%);
+    margin-top: 0;
+    color: rgb(255, 255, 255);
+}
+
+
+
+.custom-row2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 15px;
+}
+
+
+.featured-classes h4 {
+    font-size: 1.5rem;
+}
+
+.featured-classes .btn {
+    margin-top: 10px;
+}
+
+
+.stats {
+    background: #000000;
+    color: #ffffff;
+}
+
+
+#before-after .carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    overflow: hidden;
+    filter: brightness(0.75);
+}
+
+
+.success-stories {
+    background: #ffffff;
+    color: #000000;
+}
+
+.success .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+
+.footer {
+    background-color: #1A1A1A;
+}
+
+.footer h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer h5 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff1414;
+}
+
+.footer hr {
+    margin: 20px 0;
+}
+
+
+
+@media (max-width: 576px) {
+
+    .heading {
+        position: relative;
+        top: 150px;
+        left: 0;
+        font-size: 40px;
+    }
+
+    .headingp {
+        position: relative;
+        top: 140px;
+        left: 0;
+        font-size: 20px;
+    }
+
+    .button-container {
+        position: relative;
+        top: 130px;
+
+    }
+
+    .custom-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+
+
+    .abouttext {
+        margin-top: 30px;
+    }
+
+
+    .about p {
+        font-size: 20px;
+        text-align: start;
+    }
+
+
+    .about .aboutimage {
+        width: 100%;
+    }
+
+    .about .text-center {
+        transition: transform 0.5s ease;
+        transform: translateY(0);
+        width: 100%;
+    }
+
+    .about:not(.toggled):hover .aboutimage img {
+        transform: translateY(330px);
+    }
+
+    .about:not(.toggled):hover .text-center {
+        transform: translateY(-330px);
+
+    }
+
+    .about.toggled .aboutimage img {
+        transform: translateY(0);
+    }
+
+    .about.toggled .text-center {
+        transform: translateY(0);
+    }
+
+
+    .facility-item {
+        flex: 0 0 100%;
+    }
+
+}
+
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+
+    .custom-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+
+    .about {
+        height: 820px;
+    }
+
+    .abouttext {
+        margin-top: -30px;
+    }
+
+    .about p {
+        font-size: 20px;
+        text-align: start;
+    }
+
+    .about .aboutimage {
+        width: 100%;
+    }
+
+    .about .text-center {
+        transition: transform 0.5s ease;
+        transform: translateY(0);
+        width: 100%;
+    }
+
+    .about:not(.toggled):hover .aboutimage img {
+        transform: translateY(330px);
+    }
+
+    .about:not(.toggled):hover .text-center {
+        transform: translateY(-330px);
+    }
+
+    .about.toggled .aboutimage img {
+        transform: translateY(0);
+    }
+
+    .about.toggled .text-center {
+        transform: translateY(0);
+    }
+
+    .stat-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .facility-item:hover .text-overlay {
+        transform: translateY(-90%);
+        margin-top: 0;
+        color: rgb(255, 255, 255);
+        font-size: 10px;
+    }
+
+    .facility-item {
+        flex: 0 0 45%;
+        margin: 10px;
+    }
+
+
+    #before-after .carousel-item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #before-after .carousel-item .col-md-6 {
+        flex: 1;
+        max-width: 50%;
+    }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+    .about:not(.toggled):hover .aboutimage img {
+        transform: translateX(350px);
+
+    }
+
+    .about:not(.toggled):hover .text-center {
+        transform: translateX(-350px);
+
+    }
+
+    .about.toggled .aboutimage img {
+        transform: translateX(0);
+
+    }
+
+    .about.toggled .text-center {
+        transform: translateX(0);
+
+    }
+
+    .facility-item {
+        flex: 0 0 45%;
+        margin: 10px;
+    }
+
+    .stat-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+    .about:not(.toggled):hover .aboutimage img {
+        transform: translateX(500px);
+
+    }
+
+    .about:not(.toggled):hover .text-center {
+        transform: translateX(-500px);
+
+    }
+
+    .about.toggled .aboutimage img {
+        transform: translateX(0);
+
+    }
+
+    .about.toggled .text-center {
+        transform: translateX(0);
+
+    }
+
+    .facility-item {
+        flex: 0 0 30%;
+        margin: 10px;
+    }
+
+    .stat-item {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+
+@media (min-width: 1201px) {
+
+
+    .stat-item {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .facility-item {
+        flex: 0 0 30%;
+        margin: 10px;
+    }
+}
